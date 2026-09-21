@@ -1799,7 +1799,7 @@ function Footer() {
       flexWrap: 'wrap'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: "../../assets/logo/aquanix-wordmark.png",
+    src: "./assets/logo/aquanix-wordmark.png",
     alt: "Aquanix \u2014 Nh\u1EADt k\xFD thu\u1EF7 s\u1EA3n \u0111i\u1EC7n t\u1EED",
     style: {
       height: 40
@@ -2422,7 +2422,7 @@ function Footer() {
       flexWrap: 'wrap'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: "../../assets/logo/aquanix-wordmark.png",
+    src: "./assets/logo/aquanix-wordmark.png",
     alt: "Aquanix \u2014 Nh\u1EADt k\xFD thu\u1EF7 s\u1EA3n \u0111i\u1EC7n t\u1EED",
     style: {
       height: 40

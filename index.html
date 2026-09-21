@@ -1,5 +1,5 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aquanix — Ghi nhật ký ao bằng điện thoại</title>
-<link rel="stylesheet" href="./styles.css">
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Aquanix — Ghi nhật ký ao bằng điện thoại</title>
+<link rel="preload" as="image" href="./assets/photos/opt/aerial-dawn.jpg" fetchpriority="high"><link rel="stylesheet" href="./styles.css">
 <style>
 body{background:var(--surface)}h1,h2,h3{color:var(--ink)}
 .wrap{max-width:1120px;margin:0 auto;padding:0 var(--space-5);box-sizing:border-box}
@@ -14,6 +14,49 @@ body{background:var(--surface)}h1,h2,h3{color:var(--ink)}
 html{scroll-behavior:smooth}
 @media(max-width:760px){.g2,.g3{grid-template-columns:1fr}.feat.rev>*:first-child{order:0}.sec{padding-top:var(--space-7);padding-bottom:var(--space-7)}.hero-h1{font-size:36px;line-height:42px}.dots{display:none!important}}
 @media (max-width: 860px){.hero-grid{grid-template-columns:minmax(0,1fr) !important}}
+
+@media(max-width:760px){
+  .wrap{padding-left:var(--space-4);padding-right:var(--space-4)}
+  .t-display-l{font-size:30px!important;line-height:36px!important}
+  .t-display-m{font-size:22px!important;line-height:28px!important}
+  .t-body-lg{font-size:16px!important;line-height:24px!important}
+  .day-h3{font-size:24px!important;line-height:30px!important}
+  .quote{font-size:21px!important;line-height:30px!important}
+  .hero-sec{min-height:auto!important;align-items:flex-start!important}
+  .hero-sec .wrap{padding-top:var(--space-7)!important;padding-bottom:var(--space-7)!important}
+  .hero-h1{font-size:34px;line-height:40px}
+  .hero-h1 span{text-decoration-thickness:4px!important;text-underline-offset:6px!important}
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-ctas>*{width:100%;justify-content:center}
+  .hdr-brand-text{font-size:18px}
+  .feat{gap:var(--space-5)!important}
+  .pp{grid-template-columns:minmax(0,1fr) minmax(0,38%)!important}
+  .pp .pp-photo{height:300px!important}
+  .pp .pp-phone{margin-left:-14%!important}
+  .solo-photo{height:300px!important}
+  .dl-grid{grid-template-columns:minmax(0,1fr)!important}
+  .dl-grid .dl-phone{display:none!important}
+  .dl-qrs{flex-direction:row!important;justify-content:center;gap:var(--space-4)!important}
+  .form-2{grid-template-columns:1fr!important}
+  input,textarea{font-size:16px!important}
+}
+@media(max-width:400px){.hero-h1{font-size:30px;line-height:36px}.pp{grid-template-columns:minmax(0,1fr) minmax(0,42%)!important}}
+
+html,body{overflow-x:clip;max-width:100%}
+img{max-width:100%}
+.step-no{display:none}
+@media(max-width:1000px){.menu-btn{display:inline-flex!important}}
+@media(min-width:761px) and (max-width:1000px){.hero-h1{font-size:46px;line-height:52px}.g3{grid-template-columns:repeat(2,minmax(0,1fr))}.pp .pp-photo{height:380px!important}.solo-photo{height:380px!important}}
+@media(max-width:760px){
+  .hdr{height:64px!important}
+  .steps{gap:var(--space-7)!important;position:relative}
+  .step{position:relative;padding-left:40px}
+  .step::before{content:'';position:absolute;left:13px;top:28px;bottom:calc(-1*var(--space-7) - 4px);width:2px;background:var(--brand-100)}
+  .step:last-child::before{display:none}
+  .step-no{display:inline-flex;position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--brand-600);color:#fff;font-weight:700;font-size:14px;align-items:center;justify-content:center;font-family:var(--font-sans)}
+  .step .t-code{font-size:14px}
+  .pp,.solo-photo{margin-left:-40px}
+}
 </style>
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
