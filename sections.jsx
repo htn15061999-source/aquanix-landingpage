@@ -27,18 +27,19 @@ function Day() {
   ];
   return <section id="day"><div className="wrap sec">
     <Eyebrow>Một ngày ở ao</Eyebrow>
-    <h2 className="t-display-l" style={{ margin: '0 0 var(--space-2)', maxWidth: 640 }}>Việc vẫn làm như cũ. Chỉ thêm một chạm.</h2>
+    <h2 className="t-display-l one-line" style={{ margin: '0 0 var(--space-2)' }}>Việc vẫn làm như cũ. Chỉ thêm một chạm.</h2>
     <p className="t-body-lg" style={{ margin: '0 0 var(--space-7)', color: 'var(--ink-muted)', maxWidth: 560 }}>Ba việc quen tay mỗi sáng — app ghi lại, bạn không phải nhớ.</p>
     <div className="steps" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
-      {steps.map(([t, h, d1, d2, pic, app, st, badge], i) => <div key={t} className={'g2 feat step' + (i % 2 ? ' rev' : '')} style={{ gap: 'var(--space-7)', alignItems: 'center' }}>
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 'var(--space-2)' }}><span className="step-no" aria-hidden="true">{i + 1}</span><span className="t-code" style={{ color: 'var(--brand-500)' }}>{t}</span></div>
+      {steps.map(([t, h, d1, d2, pic, app, st, badge], i) => <div key={t} className={'step' + (i % 2 ? ' rev' : '') + (i === 0 ? ' first' : '') + (i === steps.length - 1 ? ' last' : '')}>
+        <div className="step-text">
+          <div className="t-code" style={{ color: 'var(--brand-500)', marginBottom: 'var(--space-2)' }}>{t}</div>
           <h3 className="t-display-m day-h3" style={{ margin: '0 0 var(--space-3)', fontSize: 28, lineHeight: '36px' }}>{h}</h3>
           <p className="t-body-lg" style={{ margin: '0 0 var(--space-2)' }}>{d1}</p>
           <p className="t-body-lg" style={{ margin: '0 0 var(--space-4)', color: 'var(--ink-muted)' }}>{d2}</p>
           <StatusBadge status={st} style={{ whiteSpace: 'normal' }}>{badge}</StatusBadge>
         </div>
-        {app ? <PhotoPhone src={pic} app={app} /> : <div className="solo-photo" style={{ height: 440, borderRadius: 'var(--radius-xl)', overflow: 'hidden', boxShadow: 'var(--shadow-card)' }}><img src={P + pic} alt="" loading="lazy" decoding="async" style={{ ...photo, objectPosition: FOCUS[pic] || '50% 50%' }} /></div>}
+        <div className="step-rail" aria-hidden="true"><span className="step-no">{i + 1}</span></div>
+        <div className="step-media">{app ? <PhotoPhone src={pic} app={app} /> : <div className="solo-photo" style={{ height: 440, borderRadius: 'var(--radius-xl)', overflow: 'hidden', boxShadow: 'var(--shadow-card)' }}><img src={P + pic} alt="" loading="lazy" decoding="async" style={{ ...photo, objectPosition: FOCUS[pic] || '50% 50%' }} /></div>}</div>
       </div>)}
     </div>
   </div></section>;
